@@ -1,101 +1,60 @@
-# 🖥️ PC Builder — DIY Delight
+# WEB103 Project 4 - *Build Your Dream PC*
 
-A full-stack PC configurator app. Choose your CPU, GPU, RAM, storage, case color, cooling, and PSU — see a live preview and dynamic pricing, then save your build.
+Submitted by: **Stephanie Blanco**
 
-## Project Structure
+About this web app: **App description here**
 
-```
-pc-builder/
-├── server/                  # Express + PostgreSQL backend
-│   ├── config/
-│   │   ├── database.js      # DB connection pool
-│   │   └── reset.js         # Create & seed tables
-│   ├── controllers/
-│   │   └── buildsController.js
-│   ├── routes/
-│   │   └── buildsRouter.js
-│   ├── server.js
-│   ├── .env                 # ← fill this in with your Render DB creds
-│   └── package.json
-└── client/                  # React + Vite frontend
-    ├── src/
-    │   ├── components/
-    │   │   ├── PCPreview.jsx   # SVG live preview
-    │   │   └── BuildCard.jsx   # Build list card
-    │   ├── pages/
-    │   │   ├── HomePage.jsx
-    │   │   ├── BuildPage.jsx   # Create & Edit
-    │   │   └── MyBuildsPage.jsx
-    │   ├── services/
-    │   │   └── buildsAPI.js    # API fetch calls
-    │   ├── utilities/
-    │   │   ├── options.js      # Component options & prices
-    │   │   └── calcPrice.js    # Pricing + validation logic
-    │   └── App.jsx
-    └── package.json
-```
+Time spent: **2** hours
 
-## Setup
+## Required Features
 
-### 1. Install dependencies
+The following **required** functionality is completed:
 
-```bash
-# In server/
-cd server && npm install
+<!-- Make sure to check off completed functionality below -->
+- [x] **The web app uses React to display data from the API.**
+- [x] **The web app is connected to a PostgreSQL database, with an appropriately structured `CustomItem` table.**
+  - [x]  **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
+  - [x]  **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT * FROM tablename;' to display your table contents.**
+- [x] **Users can view **multiple** features of the `CustomItem` (e.g. car) they can customize, (e.g. wheels, exterior, etc.)**
+- [x] **Each customizable feature has multiple options to choose from (e.g. exterior could be red, blue, black, etc.)**
+- [x] **On selecting each option, the displayed visual icon for the `CustomItem` updates to match the option the user chose.**
+- [x] **The price of the `CustomItem` (e.g. car) changes dynamically as different options are selected *OR* The app displays the total price of all features.**
+- [x] **The visual interface changes in response to at least one customizable feature.**
+- [x] **The user can submit their choices to save the item to the list of created `CustomItem`s.**
+- [x] **If a user submits a feature combo that is impossible, they should receive an appropriate error message and the item should not be saved to the database.**
+- [x] **Users can view a list of all submitted `CustomItem`s.**
+- [x] **Users can edit a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
+- [x] **Users can delete a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
+- [x] **Users can update or delete `CustomItem`s that have been created from the detail page.**
 
-# In client/
-cd client && npm install
-```
 
-### 2. Connect your Render database
+The following **optional** features are implemented:
 
-Fill in `server/.env` with your Render Postgres credentials:
+- [ ] Selecting particular options prevents incompatible options from being selected even before form submission
 
-```
-PGUSER="your_user"
-PGPASSWORD="your_password"
-PGHOST="your_host.oregon-postgres.render.com"
-PGPORT=5432
-PGDATABASE="your_db_name"
-PORT=3000
-```
+The following **additional** features are implemented:
 
-### 3. Create the database tables
+- [ ] List anything else that you added to improve the site's functionality!
 
-```bash
-cd server && node config/reset.js
-```
+## Video Walkthrough
 
-This creates the `saved_builds` table and seeds 3 example builds.
+Here's a walkthrough of implemented required features:
 
-### 4. Run the app
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-**Terminal 1 — Backend:**
-```bash
-cd server && npm run dev
-```
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
 
-**Terminal 2 — Frontend:**
-```bash
-cd client && npm run dev
-```
+## Notes
 
-Open http://localhost:5173
+The issues I encounter was dealing  with render errors and a personal problem of generic css styling. I utilized AI to aid me in creating unique UI components and it taught me mulitple methods of how to write cleaner and more fool-proof CSS code.
 
-## API Routes
+## License
 
-| Method | Route             | Description         |
-|--------|-------------------|---------------------|
-| GET    | /api/builds       | All saved builds    |
-| GET    | /api/builds/:id   | Single build        |
-| POST   | /api/builds       | Create new build    |
-| PUT    | /api/builds/:id   | Update build        |
-| DELETE | /api/builds/:id   | Delete build        |
+Copyright [yyyy] [name of copyright owner]
 
-## Features
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-- **Live SVG preview** — case color, GPU brand indicator, and cooling type update visually as you configure
-- **Dynamic pricing** — total cost updates instantly with every selection
-- **Compatibility validation** — catches DDR4/DDR5 mismatches and underpowered PSUs
-- **CRUD** — create, view list, edit, and delete builds
-- **Responsive** — works on mobile too
+> http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
