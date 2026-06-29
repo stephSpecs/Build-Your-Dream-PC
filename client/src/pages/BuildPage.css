@@ -1,0 +1,234 @@
+.build-page {
+  display: grid;
+  grid-template-columns: 1fr 330px;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ===== LEFT (FORM) ===== */
+.build-page-left {
+  min-width: 0;
+}
+
+.build-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.form-section {
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.form-section-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  background: var(--bg-panel);
+  padding: 0.45rem 1rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.form-section > .form-group,
+.form-section > .form-row-2 {
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.form-row-2 .form-group {
+  margin-bottom: 0;
+}
+
+/* ===== COLOR SWATCHES ===== */
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.color-swatch {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-deep);
+  border: 2px solid var(--border);
+  cursor: pointer;
+  transition: all 0.15s;
+  font-size: 0.8rem;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+}
+
+.color-swatch:hover {
+  border-color: var(--border-lit);
+  color: white;
+}
+
+.color-swatch.selected {
+  border-color: var(--accent);
+  color: white;
+  background: var(--bg-hover);
+}
+
+.swatch-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--swatch-color);
+  border: 1px solid rgba(255,255,255,0.2);
+  flex-shrink: 0;
+}
+
+.swatch-name {
+  font-size: 0.8rem;
+}
+
+.swatch-price {
+  font-size: 0.7rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* ===== ACTIONS ===== */
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* ===== RIGHT (PREVIEW) ===== */
+.build-page-right {
+  position: sticky;
+  top: 80px;
+}
+
+.preview-panel {
+  padding: 1.25rem;
+}
+
+.preview-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.preview-panel-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.pc-preview-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.pc-preview-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.preview-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+}
+
+/* ===== PRICE BREAKDOWN ===== */
+.price-breakdown {
+  margin-top: 1.25rem;
+  border-top: 2px solid var(--border);
+  padding-top: 1rem;
+}
+
+.price-line-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.price-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.price-line-label {
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.price-line-val {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.price-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 2px solid var(--border);
+}
+
+.price-total > span:first-child {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: var(--font-mono);
+}
+
+.price-total-val {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .build-page {
+    grid-template-columns: 1fr;
+  }
+  .build-page-right {
+    position: static;
+    order: -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-row-2 { grid-template-columns: 1fr; }
+}

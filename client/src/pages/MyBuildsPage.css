@@ -1,0 +1,96 @@
+.my-builds-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+/* ===== BUILD CARD ===== */
+.build-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.15s;
+  box-shadow: var(--shadow-card);
+}
+
+.build-card:hover {
+  border-color: var(--border-lit);
+}
+
+.build-card-stripe {
+  height: 4px;
+  width: 100%;
+}
+
+.build-card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.build-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.build-card-name {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 0.35rem;
+}
+
+.build-card-price {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* ===== SPEC TABLE ===== */
+.build-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.spec-row {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  gap: 0.5rem;
+  align-items: baseline;
+  font-size: 0.8rem;
+}
+
+.spec-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+}
+
+.spec-value {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  word-break: break-word;
+}
+
+/* ===== CARD ACTIONS ===== */
+.build-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 2px solid var(--border);
+  flex-wrap: wrap;
+}
