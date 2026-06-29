@@ -2,7 +2,7 @@
 
 Submitted by: **Stephanie Blanco**
 
-About this web app: **App description here**
+About this web app: **Developed a full-stack web application using React for the frontend and PostgreSQL for the database. The application allows users to build custom PCs by selecting components, view the total price of their build in real time, and save custom configurations for future reference.**
 
 Time spent: **2** hours
 
@@ -40,7 +40,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='Unit4Gif.gif' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
